@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
     }
 
     function logout(){
-        return methods.signOut()
+        return methods.signOut(auth)
     }
 
     function signup(email, password) {

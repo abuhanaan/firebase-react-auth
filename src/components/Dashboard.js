@@ -14,7 +14,8 @@ export default function Dashboard() {
         try {
             await logout()
             navigate('/login')
-        } catch {
+        } catch(e) {
+            console.log(e)
             setError('Failed to log out')
         }
 
