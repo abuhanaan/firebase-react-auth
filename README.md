@@ -1,3 +1,14 @@
+# firebase-react-auth
+
+THIS IS A SIMPLE REACT APP WITH FIREBASE AUTHENTICATION
+- Account SignUp
+- User Login
+- User Logout
+- Forgot Password
+- Update Profile
+- Update Email
+- Update Password
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
