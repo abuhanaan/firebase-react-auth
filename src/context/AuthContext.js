@@ -12,6 +12,10 @@ export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
+    function resetPassword(email) {
+        return methods.sendPasswordResetEmail(auth, email)
+    }
+
     function login(email, password){
         return methods.signInWithEmailAndPassword(auth, email, password)
     }
@@ -36,7 +40,8 @@ export function AuthProvider({ children }) {
         currentUser,
         signup,
         login,
-        logout
+        logout,
+        resetPassword
     }
   return (
     <AuthContext.Provider value={value}>

@@ -1,5 +1,5 @@
 import firebase from 'firebase/compat/app'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail } from 'firebase/auth'
 // var auth=require("firebase/compat/auth")
 
 const app = firebase.initializeApp({
@@ -18,6 +18,7 @@ export const methods = {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     onAuthStateChanged,
-    signOut
+    signOut,
+    sendPasswordResetEmail
 }
 export default app
