@@ -12,8 +12,16 @@ export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
+    function updateEmail(email){
+        return methods.updateEmail(currentUser, email)
+    }
+
+    function updatePassword(password){
+        return methods.updatePassword(currentUser, password)
+    }
+
     function resetPassword(email) {
-        return methods.sendPasswordResetEmail(auth, email)
+        return methods.sendPasswordResetEmail(email)
     }
 
     function login(email, password){
@@ -41,7 +49,9 @@ export function AuthProvider({ children }) {
         signup,
         login,
         logout,
-        resetPassword
+        resetPassword,
+        updateEmail,
+        updatePassword
     }
   return (
     <AuthContext.Provider value={value}>
